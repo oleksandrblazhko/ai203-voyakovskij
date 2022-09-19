@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-19T13:00:37.149Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="TYc3jL54Uxxc9-VT327m" version="20.3.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-19T13:12:39.771Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="BqeabpFNPxZ-bVdarSeT" version="20.3.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -42,7 +42,7 @@
             <mxPoint x="12" y="-17" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HAlKXmDzrB93N0-EfDcC-8" value="Платіжна система" style="ellipse;whiteSpace=wrap;html=1;" parent="jV0h9FnW70vNuzf3sFUd-0" vertex="1">
+        <mxCell id="HAlKXmDzrB93N0-EfDcC-8" value="Сплатити платіжною системою" style="ellipse;whiteSpace=wrap;html=1;" parent="jV0h9FnW70vNuzf3sFUd-0" vertex="1">
           <mxGeometry x="250" y="140" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="HAlKXmDzrB93N0-EfDcC-3" value="Сплатити за воду" style="ellipse;whiteSpace=wrap;html=1;" parent="jV0h9FnW70vNuzf3sFUd-0" vertex="1">
