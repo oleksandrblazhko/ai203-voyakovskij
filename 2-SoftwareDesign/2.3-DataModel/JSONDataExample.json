@@ -1,20 +1,20 @@
 {
 	"user": {
-		"name": "",
+		"name": "Dmitriy",
 		"surname": "",
-		"phone": ""
+		"phone": "+380962732420"
 	},
 	"payment": {
 		"date": "2022-11-30",
 		"sum": 125.99
 	},
 	"payment system": {
-		"name": ""
+		"name": "Google Pay"
 	},
 	"shop": {
-		"location": ""
+		"location": "Макіївка"
 	},
 	"water": {
-		"name": ""
+		"name": "Роднічок 1,5 літри"
 	}
 }
