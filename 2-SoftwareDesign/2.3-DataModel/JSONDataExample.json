@@ -1,1 +1,20 @@
-
+{
+	"user": {
+		"name": "",
+		"surname": "",
+		"phone": ""
+	},
+	"payment": {
+		"date": "2022-11-30",
+		"sum": 125.99
+	},
+	"payment system": {
+		"name": ""
+	},
+	"shop": {
+		"location": ""
+	},
+	"water": {
+		"name": ""
+	}
+}
