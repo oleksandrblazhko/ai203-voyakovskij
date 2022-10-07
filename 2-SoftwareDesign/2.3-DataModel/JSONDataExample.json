@@ -16,7 +16,7 @@
 	},
 	"water": {
 		"name": "Роднічок 1,5 літри",
-          "volume":1.5,
-          "amount": 3
+		"volume": 1.5,
+		"amount": 3
 	}
 }
