@@ -92,4 +92,98 @@
 			]
 		}
 	}
+}{
+	"description": "Опис предметної області ПП",
+	"type": "object",
+	"properties": {
+		"user": {
+			"description": "Інформація про користувача",
+			"type": "object",
+			"properties": {
+				"name": {
+					"description": "ім'я",
+					"type": "string"
+				},
+				"surname": {
+					"description": "прізвище",
+					"type": "string"
+				},
+				"phone": {
+					"description": "телефон",
+					"type": "string"
+				}
+			},
+			"required": [
+				"name",
+				"phone"
+			]
+		},
+		"payment": {
+			"description": "Інформація про оплату",
+			"type": "object",
+			"properties": {
+				"date": {
+					"description": "дата оплати",
+					"type": "string"
+				},
+				"sum": {
+					"description": "сума оплати",
+					"type": "number"
+				}
+			},
+			"required": [
+				"date",
+				"sum"
+			]
+		},
+		"payment system": {
+			"description": "Інформація про систему оплати",
+			"type": "object",
+			"properties": {
+				"name": {
+					"description": "назва системи оплати",
+					"type": "string"
+				}
+			},
+			"required": [
+				"name"
+			]
+		},
+		"shop": {
+			"description": "Інформація про магазин",
+			"type": "object",
+			"properties": {
+				"location": {
+					"description": "розташування магазину",
+					"type": "string"
+				}
+			},
+			"required": [
+				"location"
+			]
+		},
+		"water": {
+			"description": "Інформація про воду",
+			"type": "object",
+			"properties": {
+				"name": {
+					"description": "назва води",
+					"type": "string"
+				},
+				"volume": {
+					"description": "об'єм",
+					"type": "number"
+				},
+				"amount": {
+					"description": "кількість",
+					"type": "integer"
+				}
+			},
+			"required": [
+				"name",
+				"volume",
+				"amount"
+			]
+		}
+	}
 }
