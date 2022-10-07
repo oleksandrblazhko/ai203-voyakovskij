@@ -75,10 +75,20 @@
 				"name": {
 					"description": "назва води",
 					"type": "string"
+				},
+				"volume": {
+					"description": "об'єм",
+					"type": "number"
+				},
+				"amount": {
+					"description": "кількість",
+					"type": "integer"
 				}
 			},
 			"required": [
-				"name"
+				"name",
+				"volume",
+				"amount"
 			]
 		}
 	}
