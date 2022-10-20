@@ -1,23 +1,33 @@
-@startuml
-
+@startuml 
 title Usecase for Information system
-
-' left to right direction
-
-actor Actor1
-actor :Complex Actor2:
-
+left to right direction
+skinparam packageStyle rect
+actor Користувач-співак
+actor Користувач
+actor API Google Maps
+actor Сервіс оплати
+actor API зовнішнього пристрою
 rectangle Software {
-
-    usecase (Usecase1)
-    usecase (Usecase2)
-    usecase (Usecase3)
-
-   :Complex Actor2: -- (Usecase1)
-   (Usecase1) .> (Usecase2) : include
-   (Usecase2) .> (Usecase3) : extends
-   Actor1 -- (Usecase2)
+  User -- (Замовити воду)
+  User -- (Сплатити за воду)
+  User -- (Отримати документи про безпеку праці)
+  User -- (Отримати план дій у разі надзвичайної ситуації)
+  User -- (Пізнати повагу оточуючих)
+  User -- (Отримати рекомендації щодо поваги оточуючих)
+  User -- (Знайти пісні для співів гуртом)
+  Користувач-співак --|> Користувач
+  (Draw up a contract) <-- Employee_of_agency
+  (Find a new home in a picturesque location) --> Employee_of_agency
+  (Pay for housing) -- Employee_of_agency
+  (E-payment) -- Service_Epay
+  
+  (Замовити воду) <.. (Знайти джерела питної води) : <<include>>
+  (Сплатити за воду) <.. (Сплатити платіжною системою) : <<extend>>
+  (Отримати план дій у разі надзвичайної ситуації) <.. (Надати доступ до геолокації) : <<extend>>
+  
+  (Знайти джерела питної води) -- API Google Maps
+  (Сплатити платіжною системою) -- Сервіс оплати
+  (Надати доступ до геолокації) -- API зовнішнього пристрою
 }
-
 @enduml
 
