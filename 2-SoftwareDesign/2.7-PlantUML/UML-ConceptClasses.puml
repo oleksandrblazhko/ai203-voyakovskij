@@ -1,23 +1,22 @@
 @startuml
 
-title Usecase for Information system
+title Example of Classes Diagram 
 
-' left to right direction
+Class Person
+Class Student
+Class FlashCards
+Class Questions
+Class Answers
 
-actor Actor1
-actor :Complex Actor2:
 
-rectangle Software {
+Person <|-- Student
 
-    usecase (Usecase1)
-    usecase (Usecase2)
-    usecase (Usecase3)
+Student"1" -- "+"FlashCards : Interacts with >
 
-   :Complex Actor2: -- (Usecase1)
-   (Usecase1) .> (Usecase2) : include
-   (Usecase2) .> (Usecase3) : extends
-   Actor1 -- (Usecase2)
-}
+FlashCards"1" o-- "1"Questions : has >
+FlashCards"1" o-- "1"Answers : has >
+Answers"1" *-- "1"Wrong : has >
+Answers"1" *-- "1"Right : has >
+
 
 @enduml
-
