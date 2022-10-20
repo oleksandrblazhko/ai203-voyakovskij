@@ -2,21 +2,11 @@
 
 title Example of Classes Diagram 
 
-Class Person
-Class Student
-Class FlashCards
-Class Questions
-Class Answers
+Class User
+Class Shop
+Class Water
 
-
-Person <|-- Student
-
-Student"1" -- "+"FlashCards : Interacts with >
-
-FlashCards"1" o-- "1"Questions : has >
-FlashCards"1" o-- "1"Answers : has >
-Answers"1" *-- "1"Wrong : has >
-Answers"1" *-- "1"Right : has >
-
+User"+" -> "+"Shop : choose
+Shop"1" o-- "+"Water : has >
 
 @enduml
