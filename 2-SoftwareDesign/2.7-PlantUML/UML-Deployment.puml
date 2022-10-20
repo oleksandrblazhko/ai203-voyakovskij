@@ -1,23 +1,31 @@
 @startuml
 
-title Usecase for Information system
+title UML-діаграма розгортання ПП
 
-' left to right direction
+left to right direction
 
-actor Actor1
-actor :Complex Actor2:
+skinparam componentStyle uml1
 
-rectangle Software {
-
-    usecase (Usecase1)
-    usecase (Usecase2)
-    usecase (Usecase3)
-
-   :Complex Actor2: -- (Usecase1)
-   (Usecase1) .> (Usecase2) : include
-   (Usecase2) .> (Usecase3) : extends
-   Actor1 -- (Usecase2)
+node "<<Desktop 1>>" as dk1 {
+	node "<<Operating System Windows/Linux>>" {
+		component [Web Brouser]
+	}
 }
 
-@enduml
+interface Keyboard
 
+interface Mouse
+
+Keyboard -- dk1
+
+Mouse -- dk1
+
+node "<<Server 1>>" as serv1 {
+	node "<<Operating System Linux>>" {
+		component [Web Server]
+	}
+}
+
+dk1 -- serv1
+
+@enduml
