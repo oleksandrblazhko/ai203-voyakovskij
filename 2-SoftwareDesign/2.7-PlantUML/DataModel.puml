@@ -1,23 +1,28 @@
-@startuml
+@startjson
 
-title Usecase for Information system
+title Example of JSON Data
 
-' left to right direction
-
-actor Actor1
-actor :Complex Actor2:
-
-rectangle Software {
-
-    usecase (Usecase1)
-    usecase (Usecase2)
-    usecase (Usecase3)
-
-   :Complex Actor2: -- (Usecase1)
-   (Usecase1) .> (Usecase2) : include
-   (Usecase2) .> (Usecase3) : extends
-   Actor1 -- (Usecase2)
+{
+	"user": {
+		"name": "John",
+		"surname": "Doe",
+		"phone": "+380962732420"
+	},
+	"payment": {
+		"date": "2022-11-30",
+		"sum": 125.99
+	},
+	"payment system": {
+		"name": "Google Pay"
+	},
+	"shop": {
+		"location": "Макіївка"
+	},
+	"water": {
+		"name": "Роднічок 1,5 літри",
+		"volume": 1.5,
+		"amount": 3
+	}
 }
 
-@enduml
-
+@endjson
