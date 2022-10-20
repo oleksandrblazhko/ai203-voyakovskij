@@ -4,7 +4,7 @@ title Example of Activity Diagram
 
 start
 :The user confirms the payment;
-:The program analyzes the payment;
+:The program checks the payment;
 if (Was the payment successful?) then (Yes)
   :Payment was successful!;
 else (No)
