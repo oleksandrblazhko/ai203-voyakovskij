@@ -2,11 +2,11 @@
 title Usecase for Information system
 left to right direction
 skinparam packageStyle rect
-actor Користувач-співак
-actor Користувач
-actor API Google Maps
-actor Сервіс оплати
-actor API зовнішнього пристрою
+actor User_singer
+actor User
+actor API_Google_Maps
+actor Payment_service
+actor External_device_API
 rectangle Software {
   User -- (Замовити воду)
   User -- (Сплатити за воду)
@@ -15,19 +15,15 @@ rectangle Software {
   User -- (Пізнати повагу оточуючих)
   User -- (Отримати рекомендації щодо поваги оточуючих)
   User -- (Знайти пісні для співів гуртом)
-  Користувач-співак --|> Користувач
-  (Draw up a contract) <-- Employee_of_agency
-  (Find a new home in a picturesque location) --> Employee_of_agency
-  (Pay for housing) -- Employee_of_agency
-  (E-payment) -- Service_Epay
+  User_singer --|> User
   
   (Замовити воду) <.. (Знайти джерела питної води) : <<include>>
   (Сплатити за воду) <.. (Сплатити платіжною системою) : <<extend>>
   (Отримати план дій у разі надзвичайної ситуації) <.. (Надати доступ до геолокації) : <<extend>>
   
-  (Знайти джерела питної води) -- API Google Maps
-  (Сплатити платіжною системою) -- Сервіс оплати
-  (Надати доступ до геолокації) -- API зовнішнього пристрою
+  (Знайти джерела питної води) -- API_Google_Maps
+  (Сплатити платіжною системою) -- Payment_service
+  (Надати доступ до геолокації) -- External_device_API
 }
 @enduml
 
