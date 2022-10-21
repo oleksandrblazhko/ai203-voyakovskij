@@ -1,0 +1,25 @@
+@startuml
+
+title UML-діаграма розгортання ПП
+
+left to right direction
+
+skinparam componentStyle uml1
+
+node "<<Настільний_комп'ютер>>" as dk1 {
+	node "<<ОС Windows>>" {
+		node "<<Web_навігатор>>" {
+			component [.js (WebStorm)]
+		}
+	}
+}
+
+interface Keyboard
+
+interface Mouse
+
+Keyboard -- dk1
+
+Mouse -- dk1
+
+@enduml

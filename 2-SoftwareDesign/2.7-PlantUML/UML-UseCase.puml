@@ -1,0 +1,29 @@
+@startuml 
+title Usecase for Information system
+left to right direction
+skinparam packageStyle rect
+actor User_singer
+actor User
+actor API_Google_Maps
+actor Payment_service
+actor External_device_API
+rectangle Software {
+  User -- (Замовити воду)
+  User -- (Сплатити за воду)
+  User -- (Отримати документи про безпеку праці)
+  User -- (Отримати план дій у разі надзвичайної ситуації)
+  User -- (Пізнати повагу оточуючих)
+  User -- (Отримати рекомендації щодо поваги оточуючих)
+  User -- (Знайти пісні для співів гуртом)
+  User_singer --|> User
+  
+  (Замовити воду) <.. (Знайти джерела питної води) : <<include>>
+  (Сплатити за воду) <.. (Сплатити платіжною системою) : <<extend>>
+  (Отримати план дій у разі надзвичайної ситуації) <.. (Надати доступ до геолокації) : <<extend>>
+  
+  (Знайти джерела питної води) -- API_Google_Maps
+  (Сплатити платіжною системою) -- Payment_service
+  (Надати доступ до геолокації) -- External_device_API
+}
+@enduml
+

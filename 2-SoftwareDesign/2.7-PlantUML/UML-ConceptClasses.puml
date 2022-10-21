@@ -1,0 +1,12 @@
+@startuml
+
+title Example of Classes Diagram 
+
+Class User
+Class Shop
+Class Water
+
+User"+" -> "+"Shop : choose
+Shop"1" o-- "+"Water : has >
+
+@enduml
