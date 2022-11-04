@@ -1,11 +1,16 @@
-let tomorrowDate = new Date()
-tomorrowDate.setDate(tomorrowDate.getDate() + 1)
+function dateValidation() {
 
-// Fix missing a day
-const offset = tomorrowDate.getTimezoneOffset();
-tomorrowDate = new Date(tomorrowDate.getTime() - (offset * 60 * 1000));
+    // Create Date object
+    let tomorrowDate = new Date() // current date
+    tomorrowDate.setDate(tomorrowDate.getDate() + 1) // add 1 day to current date
 
-let datePicker = document.getElementById("datePicker")
+    // Fix missing a day
+    const offset = tomorrowDate.getTimezoneOffset();
+    tomorrowDate = new Date(tomorrowDate.getTime() - (offset * 60 * 1000));
 
-datePicker.valueAsDate = tomorrowDate
-datePicker.setAttribute("min", tomorrowDate.toISOString().substring(0, 10))
+    // date input field
+    let datePicker = document.getElementById("datePicker")
+
+    datePicker.valueAsDate = tomorrowDate // default date
+    datePicker.setAttribute("min", tomorrowDate.toISOString().substring(0, 10)) // min value is tomorrow date
+}
