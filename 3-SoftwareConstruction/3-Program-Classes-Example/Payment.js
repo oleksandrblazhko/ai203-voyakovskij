@@ -28,6 +28,3 @@ class Payment {
         this.#sum = value;
     }
 }
-
-let p = new Payment("01.01.2021", 125.3)
-console.log(p.generateCheck())
