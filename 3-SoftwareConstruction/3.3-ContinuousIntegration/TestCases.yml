@@ -1,0 +1,16 @@
+name: TestCases
+on: push
+
+jobs:
+  test-cases:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.x'
+      
+    - name: Run Test
+      run: node $GITHUB_WORKSPACE/TestCases.js

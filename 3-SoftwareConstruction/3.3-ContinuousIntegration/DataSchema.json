@@ -1,0 +1,106 @@
+{
+  "description": "Опис предметної області ПП",
+  "type": "object",
+  "properties": {
+    "user": {
+      "description": "Інформація про користувача",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "ім'я",
+          "type": "string",
+          "maxLength": 20
+        },
+        "surname": {
+          "description": "прізвище",
+          "type": "string",
+          "maxLength": 30
+        },
+        "phone": {
+          "description": "телефон",
+          "type": "string",
+          "pattern": "^(\\+?38)?0(50)|(6[367])|(73)|(9[356789])[0-9]{7}$"
+        }
+      },
+      "required": [
+        "name",
+        "phone"
+      ]
+    },
+    "payment": {
+      "description": "Інформація про оплату",
+      "type": "object",
+      "properties": {
+        "date": {
+          "description": "дата оплати",
+          "type": "string",
+          "format": "date"
+        },
+        "sum": {
+          "description": "сума оплати",
+          "type": "number",
+          "minimum": 0.01
+        }
+      },
+      "required": [
+        "date",
+        "sum"
+      ]
+    },
+    "payment system": {
+      "description": "Інформація про систему оплати",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "назва системи оплати",
+          "type": "string",
+          "maxLength": 20
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "shop": {
+      "description": "Інформація про магазин",
+      "type": "object",
+      "properties": {
+        "location": {
+          "description": "розташування магазину",
+          "type": "string",
+          "pattern": "(м.)|(пгт.)|(с.)",
+          "maxLength": 100
+        }
+      },
+      "required": [
+        "location"
+      ]
+    },
+    "water": {
+      "description": "Інформація про воду",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "назва води",
+          "type": "string",
+          "maxLength": 50
+        },
+        "volume": {
+          "description": "об'єм",
+          "type": "number",
+          "minimum": 0.01
+        },
+        "amount": {
+          "description": "кількість",
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "name",
+        "volume",
+        "amount"
+      ]
+    }
+  }
+}
